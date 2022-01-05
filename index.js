@@ -1,6 +1,9 @@
 let count = 0;
 
 let countEl = document.getElementById('count-el');
+let saveEl = document.getElementById('save-el');
+
+saveEl.innerText += 0;
 
 //increment function call
 function increment() { 
@@ -13,15 +16,14 @@ function increment() {
     }
 }
 
-let saveEl = document.getElementById('save-el');
-
 //save function call
 function save() {
+    let currCount = count;
     if (count > 50) {
         saveEl.innerText = "Theater is fully occupied";
     }
     else {
-        saveEl.innerText = 'Theater Count: ' + count;
+        saveEl.innerText += '-' + currCount;
     }
 }
 
